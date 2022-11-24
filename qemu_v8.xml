@@ -6,24 +6,25 @@
         <default remote="github" revision="master" />
 
         <!-- OP-TEE gits -->
-        <project path="optee_client"         name="OP-TEE/optee_client.git" />
-        <project path="optee_os"             name="OP-TEE/optee_os.git" />
-        <project path="optee_test"           name="OP-TEE/optee_test.git" />
-        <project path="build"                name="OP-TEE/build.git">
+        <project path="optee_client"         name="OP-TEE/optee_client.git" revision="refs/tags/3.19.0" />
+        <project path="optee_os"             name="shijujose4/optee_os.git" revision="qemu_sel2" />
+        <project path="optee_test"           name="OP-TEE/optee_test.git" revision="refs/tags/3.19.0" />
+        <project path="build"                name="shijujose4/build.git"revision="qemu_sel2" >
                 <linkfile src="qemu_v8.mk" dest="build/Makefile" />
         </project>
 
         <!-- linaro-swg gits -->
         <project path="linux"                name="linaro-swg/linux.git"                  revision="optee" clone-depth="1" />
-        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git"/>
-        <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
+        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git" revision="refs/tags/3.19.0" />
+        <project path="optee_examples"       name="linaro-swg/optee_examples.git" revision="refs/tags/3.19.0" />
 
         <!-- Misc gits -->
         <project path="buildroot"            name="buildroot/buildroot.git"               revision="refs/tags/2021.11" clone-depth="1" />
         <project path="edk2"                 name="tianocore/edk2.git"                    revision="refs/tags/edk2-stable202202" sync-s="true" />
         <project path="mbedtls"              name="Mbed-TLS/mbedtls.git"                   revision="refs/tags/mbedtls-2.26.0" clone-depth="1" />
         <project path="optee_rust"           name="apache/incubator-teaclave-trustzone-sdk.git"            revision="3272b38b013395e3376a38af6315633239d26c1c" />
-        <project path="qemu"                 name="qemu/qemu.git"                         revision="refs/tags/v7.0.0" clone-depth="1" />
-        <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"           revision="refs/tags/v2.6" clone-depth="1" remote="tfo" />
+        <project path="qemu"                 name="jenswi-linaro/qemu.git"                         revision="qemu_sel2" />
+        <project path="trusted-firmware-a"   name="shijujose4/arm-trusted-firmware.git"           revision="qemu_sel2" />
+        <project path="hafnium"   name="shijujose4/hafnium.git" revision="qemu_sel2" />
         <project path="u-boot"               name="u-boot.git"                            revision="refs/tags/v2021.04" remote="u-boot" clone-depth="1" />
 </manifest>
